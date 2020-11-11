@@ -12,7 +12,7 @@ sbioaddtolibrary(GAA_unitObj);
 %% Script to add dose of precisely edited progenitors or mature cells to the system
 
 %% Load SimBiology Project
-sbioloadproject("Pompe_Model_v29_CellDeath.sbproj")
+sbioloadproject("Pompe_Model_v30_CellDeath.sbproj")
 CCModel = m1;
 
 %% Set simulation time to 2 years

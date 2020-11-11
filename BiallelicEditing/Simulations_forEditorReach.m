@@ -57,11 +57,12 @@ for i=2:n-2
 end
 Norm_DerivCCed = DerivCCed ./ TotalCellArray(2:n-2);
 Treshape = T(2:n-2);
-p = plot(Treshape, Norm_DerivCCed * 100); hold on;
+p = plot(Treshape, Norm_DerivCCed * 100);
 CellsEdited = trapz(Treshape,Norm_DerivCCed * 100)/T(n-1);
 
 set(gca,'YLim',[0 1.5]);
 set(gca,'XLim',[0 30]);
+figure;
 
 %% Percentage Edited vs cross corrected
 Precisely_Edited = [3 4];
@@ -86,3 +87,5 @@ end
 Norm_Precise = Precise ./ TotalCellArray';
 Norm_Imprecise = Imprecise ./ TotalCellArray';
 Norm_CC = CC ./ TotalCellArray';
+
+plot(T, Norm_Precise, T, Norm_Imprecise, T, Norm_CC);
